@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Temperatura e Umidade</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-    </style>
+    <title>Dashboard de Temperatura e Umidade - Harison</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -26,7 +17,7 @@
         <h1>Média de Temperatura e Umidade - Barra</h1>
         <canvas id="graficoBarra"></canvas>
     </div>
-
+    
     <script>
         const grafLinha = document.getElementById('graficoLinha').getContext('2d');
         const graficoLinha = new Chart(grafLinha, {
@@ -54,8 +45,8 @@
                 }
             }
         });
-
-
+        
+        
         const grafBarra = document.getElementById('graficoBarra').getContext('2d');
         const graficoBarra = new Chart(grafBarra, {
             type: 'bar',
@@ -82,5 +73,4 @@
         });
     </script>
 </body>
-
 </html>
